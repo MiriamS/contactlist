@@ -1,11 +1,19 @@
 <h1>Contacts</h1>
-<p>listpage works!</p>
-<div>
-    <ul>
+
+<a routerLink="/newcontact" >Add a contact</a>
+
+    <ul class="list">
         <li *ngFor="let contact of contacts">
-            id is {{contact.id}}.
-    name is {{contact.firstname}}.
+            <div class="card">
+                <h3>{{contact.firstname}} {{contact.lastname}}</h3>
+                <button>edit</button>
+                <button type="button">delete</button>
+                <span>{{contact.phone}}</span>
+                <details>
+                    <summary>more</summary>
+                    <span>{{contact.email}}</span>
+                </details>
+            </div>
         </li>
     </ul>
-    
-</div>
+

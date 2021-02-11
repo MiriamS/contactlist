@@ -1,0 +1,26 @@
+ul {
+    list-style: none;
+}
+
+.list {
+    display: flex;
+    width: 100%;
+}
+
+.card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 20px;
+    max-width: 400px;
+    position: relative;
+}
+
+.card span {
+    display: block;
+}
+
+.card button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
