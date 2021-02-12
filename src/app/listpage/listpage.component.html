@@ -1,19 +1,25 @@
 <h1>Contacts</h1>
 
-<a routerLink="/newcontact" >Add a contact</a>
+<a routerLink="/newcontact" class="button-link">Add a contact</a>
 
     <ul class="list">
         <li *ngFor="let contact of contacts">
+ 
             <div class="card">
                 <h3>{{contact.firstname}} {{contact.lastname}}</h3>
-                <button>edit</button>
-                <button type="button">delete</button>
-                <span>{{contact.phone}}</span>
-                <details>
-                    <summary>more</summary>
-                    <span>{{contact.email}}</span>
-                </details>
+                <span class="phone">{{contact.phone}}</span>
+
+                <div aria-expanded="false" aria-labelledby="show-email-id" class="expand-box">
+                    <a href="mailto:{{contact.email}}">{{contact.email}}</a>
+                </div>
+                <div class="actions">
+                    <button type="button" aria-controls="show-email-id" data-target="show-email-id">Expand</button>
+                    <button (click)="editContact">edit</button>
+                    <button type="button" (click)="alert('delete')">delete</button>
+                </div>
+                
             </div>
+
         </li>
     </ul>
 
