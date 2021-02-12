@@ -1,6 +1,7 @@
 export interface Hero {
-  firstname: string;
-  lastname: string;
-  email: string;
-  phone: string;
+    id: number,
+    firstname: string;
+    lastname: string;
+    email: string;
+    phone: string;
 }
