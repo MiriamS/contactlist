@@ -1,0 +1,50 @@
+
+<h2>My Heroes</h2>
+<ul class="heroes">
+  <li *ngFor="let hero of heroes"
+    [class.selected]="hero === selectedHero"
+    >
+    <div class="card">
+        <h3>{{hero.firstname}} {{hero.lastname}}</h3>
+        <span class="phone">{{hero.phone}}</span>
+    
+        <div [aria-expanded]="hero === selectedHero" aria-labelledby="{{hero.id}}" class="expand-box" [class.expanded]="hero === selectedHero">
+            <!-- <a [href]="'mailto:' + hero.email">{{hero.email}}</a> -->
+        </div>
+        <div class="actions" [data-target]="hero.id">
+            <button type="button" aria-controls="show-email-id"
+             <!-- [data-target]="hero.id"  -->
+             (click)="onSelect(hero)">Expand</button>
+            <button (click)="edithero">edit</button>
+            <button type="button" (click)="alert('delete')">delete</button>
+        </div>
+      
+    </div>
+
+  </li>
+</ul>
+
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
+
+<!-- <div class="card">
+    <h3>{{contact.firstname}} {{contact.lastname}}</h3>
+    <span class="phone">{{contact.phone}}</span>
+
+    <div aria-expanded="false" aria-labelledby="{{contact.id}}" class="expand-box">
+        <a href="mailto:{{contact.email}}">{{contact.email}}</a>
+    </div>
+    <div class="actions">
+        <button type="button" aria-controls="show-email-id" [data-target]="contact.id" (click)="expandCard(contact)">Expand</button>
+        <button (click)="editContact">edit</button>
+        <button type="button" (click)="alert('delete')">delete</button>
+    </div>
+    
+</div> -->
+
+<!-- <ul class="heroes">
+    <li *ngFor="let hero of heroes"
+      [class.selected]="hero === selectedHero"
+      (click)="onSelect(hero)">
+      <span class="badge">{{hero.id}}</span> {{hero.firstname}}
+    </li>
+  </ul> -->
