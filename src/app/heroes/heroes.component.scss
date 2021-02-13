@@ -68,12 +68,11 @@ ul {
     margin: 20px;
 }
 
-.card span {
+.card h3 + span {
     display: block;
     color: rgba(0,0,0,.6);
     font-size: 14px;
     line-height: 20px;
-    
 }
 
 .phone {
@@ -111,14 +110,15 @@ h3 {
     display: block;
 }
 
-.expand-button {
-    
-    width: 100%;
-    margin: 0;
-    background-color: transparent;
-    text-align: left;
-    padding: 10px 16px;
+.expand-button span:nth-child(2),
+.expanded.expand-button span:first-child {
+    display: none;
 }
+
+.expanded.expand-button span:nth-child(2) {
+    display: block;
+}
+
 
 .expand-box a {
     font-size: 14px;

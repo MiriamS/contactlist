@@ -9,11 +9,11 @@
                 <h3>{{contact.firstname}} {{contact.lastname}}</h3>
                 <span class="phone">{{contact.phone}}</span>
 
-                <div aria-expanded="false" aria-labelledby="show-email-id" class="expand-box">
+                <div aria-expanded="false" aria-labelledby="{{contact.id}}" class="expand-box">
                     <a href="mailto:{{contact.email}}">{{contact.email}}</a>
                 </div>
                 <div class="actions">
-                    <button type="button" aria-controls="show-email-id" data-target="show-email-id">Expand</button>
+                    <button type="button" aria-controls="show-email-id" [data-target]="contact.id" (click)="expandCard(contact)">Expand</button>
                     <button (click)="editContact">edit</button>
                     <button type="button" (click)="alert('delete')">delete</button>
                 </div>

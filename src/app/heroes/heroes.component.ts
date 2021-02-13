@@ -22,8 +22,19 @@ export class HeroesComponent implements OnInit {
   }
 
   onSelect(hero: Hero): void {
-    this.selectedHero = hero;
-    // this.messageService.add(`HeroesComponent: Selected hero id=${hero.id}`);
+      if (this.selectedHero === hero) {
+        this.selectedHero = null;
+      } else {
+        this.selectedHero = hero;
+      }
+    
+    this.messageService.add(`HeroesComponent: Selected hero id=${hero.id}`);
+  }
+
+  deleteHero(hero: Hero): void {
+    if(window.confirm("Are you sure to delete ")) {
+        console.log("Implement delete functionality here" + hero.id);
+      }
   }
 
   getHeroes(): void {
