@@ -32,10 +32,10 @@ export class HeroesComponent implements OnInit {
   }
 
 
-    deleteHero(identifier: number) {
-        //if(window.confirm("Are you sure to delete " + hero.firstname + ' ' + hero.lastname + '?')) {
-            this.heroService.delete(identifier);
-        //}
+    deleteHero(personToRemove: object) {
+        if(window.confirm("Are you sure to delete " + personToRemove['firstname'] + ' ' + personToRemove['lastname'] + '?')) {
+            this.heroService.delete(personToRemove['id']);
+        }
     }
  
 
