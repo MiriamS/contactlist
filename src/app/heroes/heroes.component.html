@@ -21,7 +21,7 @@
             <span>Contract</span>
             </button>
             <a [routerLink]="['/edit',hero.id]" class="button-link">edit</a>
-            <button type="button" (click)="deleteHero(hero)">delete</button>
+            <button type="button" (click)="deleteHero(hero.id)">delete</button>
         </div>
       
     </div>

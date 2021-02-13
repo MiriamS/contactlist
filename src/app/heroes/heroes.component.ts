@@ -31,11 +31,13 @@ export class HeroesComponent implements OnInit {
     this.messageService.add(`HeroesComponent: Selected hero id=${hero.id}`);
   }
 
-  deleteHero(hero: Hero): void {
-    if(window.confirm("Are you sure to delete ")) {
-        console.log("Implement delete functionality here" + hero.id);
-      }
-  }
+
+    deleteHero(identifier: number) {
+        //if(window.confirm("Are you sure to delete " + hero.firstname + ' ' + hero.lastname + '?')) {
+            this.heroService.delete(identifier);
+        //}
+    }
+ 
 
   getHeroes(): void {
     this.heroService.getHeroes()
