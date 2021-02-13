@@ -1,34 +1,26 @@
 
-<h2>My Heroes</h2>
+<h1>Heroes</h1>
+<a routerLink="/newcontact" class="button-link">Add a contact</a>
 <ul class="heroes">
-  <li *ngFor="let hero of heroes"
-    [class.selected]="hero === selectedHero"
-    >
-    <div class="card">
+  <li *ngFor="let hero of heroes">
+    <div class="card" [aria-expanded]="hero === selectedHero" [class.expanded]="hero === selectedHero">
         <h3>{{hero.firstname}} {{hero.lastname}}</h3>
         <span class="phone">{{hero.phone}}</span>
     
-        <div [aria-expanded]="hero === selectedHero" aria-labelledby="{{hero.id}}" class="expand-box" [class.expanded]="hero === selectedHero">
+        <div aria-labelledby="{{hero.id}}" class="expand-box">
              <a [href]="'mailto:' + hero.email">{{hero.email}}</a> 
         </div>
         <div class="actions" [data-target]="hero.id">
 
-
             <button 
                 type="button" aria-controls="show-email-id"
                 class="expand-button"
-                [class.expanded]="hero === selectedHero"
              [data-target]="hero.id"  
              (click)="onSelect(hero)">
              <span>Expand</span>
             <span>Contract</span>
             </button>
-
-             <!-- <button  type="button" aria-controls="show-email-id"
-             [data-target]="hero.id"  
-             (click)="hideExtra(hero)">Hide</button> -->
-
-            <button (click)="deleteHero(hero)">edit</button>
+            <a [routerLink]="['/edit',hero.id]" class="button-link">edit</a>
             <button type="button" (click)="deleteHero(hero)">delete</button>
         </div>
       
@@ -38,3 +30,4 @@
 </ul>
 
 <app-hero-detail [hero]="selectedHero"></app-hero-detail>
+<app-messages></app-messages>

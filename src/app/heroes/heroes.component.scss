@@ -65,7 +65,13 @@ ul {
     0px 2px 2px 0px rgba(0, 0, 0, 0.14),
     0px 3px 1px -2px rgba(0, 0, 0, 0.12);
     color: #000;
-    margin: 20px;
+    background-color: #fff;
+    margin: 20px 30px 46px;
+    transition: margin 1s;
+}
+
+.expanded.card {
+    margin-bottom: 10px;
 }
 
 .card h3 + span {
@@ -98,30 +104,36 @@ h3 {
     justify-content: space-between;
     border-top: 1px solid #ccc;
     padding: 0 6px;
+    // font-size: 13.333px;
 }
 
 .expand-box {
     /* // outline: 1px solid brown; */
-    padding: 0 16px 16px;
-    display: none;
+    padding: 0 16px;
+    height: 0;
+    overflow: hidden;
+    transition: height 1s;
 }
 
-.expand-box.expanded {
-    display: block;
+.expanded .expand-box {
+    height: 36px;
 }
 
 .expand-button span:nth-child(2),
-.expanded.expand-button span:first-child {
+.expanded .expand-button span:first-child {
     display: none;
 }
 
-.expanded.expand-button span:nth-child(2) {
+.expanded .expand-button span:nth-child(2) {
     display: block;
 }
-
 
 .expand-box a {
     font-size: 14px;
     line-height: 20px;
+    display: none;
 }
 
+.expanded .expand-box a {
+    display: inline;
+}
