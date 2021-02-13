@@ -19,23 +19,18 @@ export class HeroService {
     return heroes;
   }
 
-  add() {
+  add(personToAdd: object) {
+    // increment id
+    let highestId = -1;
     HEROES.forEach(function(item, index) {
-        let highestId = -1;
         if (item.id > highestId) {
             highestId = item.id;
         }
-        console.log (highestId);
-      })
-    let aNewOne = {
-        "id": 2,
-        "firstname": "Jay",
-        "lastname": "Lo",
-        "email": "jl@example.com",
-        "phone": "650 238 8375"
-    }
-    HEROES.push(aNewOne);
-    console.log(HEROES);
+      });
+    highestId ++;
+
+    personToAdd[0].id = highestId;
+    HEROES.push(personToAdd[0]);
 
     this.messageService.add('HeroService: add heroes');
   }
