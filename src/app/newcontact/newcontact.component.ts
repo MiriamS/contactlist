@@ -14,11 +14,9 @@ export class NewcontactComponent implements OnInit {
     contact = { id: -1, firstname: '', lastname: '', email: '', phone: '' };
 
     addContact() {
-
         let mycontact = [
             this.contact
         ];
-
         this.contactService.add(mycontact);
     }
 

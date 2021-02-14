@@ -11,20 +11,20 @@ import { EditComponent } from './edit/edit.component';
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NewcontactComponent,
-    ContactsComponent,
-    ContactDetailComponent,
-    MessagesComponent,
-    EditComponent,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        NewcontactComponent,
+        ContactsComponent,
+        ContactDetailComponent,
+        MessagesComponent,
+        EditComponent,
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        FormsModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

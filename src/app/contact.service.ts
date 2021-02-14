@@ -32,7 +32,7 @@ export class ContactService {
 
     add(personToAdd: object) {
 
-        // increment id
+        // fake autoincrement id
         if (personToAdd[0].id === -1) {
             let highestId = -1;
 
