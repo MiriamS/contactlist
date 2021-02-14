@@ -1,64 +1,50 @@
-/* HeroesComponent's private CSS styles */
-/* .heroes {
-  margin: 0 0 2em 0;
-  list-style-type: none;
-  padding: 0;
-  width: 15em;
+h1 + div {
+    text-align: right;
+    padding: 20px 50px 46px;
 }
-.heroes li {
-  cursor: pointer;
-  position: relative;
-  left: 0;
-  background-color: #EEE;
-  margin: .5em;
-  padding: .3em 0;
-  height: 1.6em;
-  border-radius: 4px;
+
+.add-contact {
+    background-color: #8E24AA;
+    color: #fff;
+    padding: 12px 15px;
+    box-shadow:  0px 1px 5px 0px rgba(0, 0, 0, 0.2),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+    0px 3px 1px -2px rgba(0, 0, 0, 0.12);
 }
-.heroes li:hover {
-  color: #607D8B;
-  background-color: #DDD;
-  left: .1em;
+
+.add-contact:hover,
+.add-contact:focus {
+    background-color: #9b27b0;
+    box-shadow:0px 1px 8px 0px rgba(0, 0, 0, 0.2),
+    0px 3px 4px 0px rgba(0, 0, 0, 0.14),
+    0px 3px 3px -2px rgba(0, 0, 0, 0.12); 
 }
-.heroes li.selected {
-  background-color: #CFD8DC;
-  color: white;
+
+.add-contact:focus {
+    outline: 1px solid #f10085;
+    outline-offset: 3px;
 }
-.heroes li.selected:hover {
-  background-color: #BBD8DC;
-  color: white;
-}
-.heroes .badge {
-  display: inline-block;
-  font-size: small;
-  color: white;
-  padding: 0.8em 0.7em 0 0.7em;
-  background-color:#405061;
-  line-height: 1em;
-  position: relative;
-  left: -1px;
-  top: -4px;
-  height: 1.8em;
-  margin-right: .8em;
-  border-radius: 4px 0 0 4px;
-} */
+
 ul {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    margin-left: auto;
-    margin-right: auto;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 2100px;
+    padding: 0 20px;
 }
 
-.list {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: auto;
-    margin-right: auto;
+.spacer { /* cards in columns but centered on the page. */
+    content: "";
+    display: block;
+    height: 2px;
+    width: 360px;
 }
 
 .card {
     border: 1px solid #ccc;
+    border-radius: 6px;
     width: 300px;
     position: relative;
     box-shadow:  0px 1px 5px 0px rgba(0, 0, 0, 0.2),
@@ -76,7 +62,7 @@ ul {
 
 .card h3 + span {
     display: block;
-    color: rgba(0,0,0,.6);
+    color: rgba(0,0,0,.65);
     font-size: 14px;
     line-height: 20px;
 }
@@ -102,7 +88,7 @@ h3 {
     align-items: flex-end;
     flex-direction: row;
     justify-content: space-between;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #eee;
     padding: 0 6px;
     // font-size: 13.333px;
 }
@@ -132,6 +118,7 @@ h3 {
     font-size: 14px;
     line-height: 20px;
     display: none;
+    color: rgba(0,0,0,.65);
 }
 
 .expanded .expand-box a {

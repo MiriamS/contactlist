@@ -31,14 +31,12 @@ export class HeroesComponent implements OnInit {
     this.messageService.add(`HeroesComponent: Selected hero id=${hero.id}`);
   }
 
-
     deleteHero(personToRemove: object) {
         if(window.confirm("Are you sure to delete " + personToRemove['firstname'] + ' ' + personToRemove['lastname'] + '?')) {
             this.heroService.delete(personToRemove['id']);
         }
     }
  
-
   getHeroes(): void {
     this.heroService.getHeroes()
         .subscribe(heroes => this.heroes = heroes);
