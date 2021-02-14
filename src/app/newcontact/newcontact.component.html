@@ -1,6 +1,6 @@
 
 <div class="container">
-    <button (click)="addHero()">Save mock</button>
+
     <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
         <!-- <form> -->
         <h1>Add a New Contact</h1>
@@ -41,7 +41,7 @@
             </div>
           </div>
         <div>
-            <button type="submit" [disabled]="heroForm.invalid">Save</button>
+            <button type="submit" (click)="addHero()" [disabled]="heroForm.invalid">Save</button>
         </div>
     </form>
  

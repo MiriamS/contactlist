@@ -10,39 +10,36 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 export class NewcontactComponent implements OnInit {
 
-    // person = {
-    //     "firstname": "start",
-    //     "lastname": "",
-    //     "email": "",
-    //     "phone": ""
-    // }
-
-    // person: Object = {};
-    // firstname: string = "";
-    lastname: string = "yo";
-    // phone: string = "";
-    // email: string = "";
-
-    hero = {firstname: 'Dr.', lastname: '', email: 'some@email.com', phone: '234567'};
+    hero = {id: -1, firstname: '', lastname: '', email: '', phone: ''};
 
     constructor(private heroService: HeroService, private messageService: MessageService) { }
 
-    ngOnInit(): void {}
+    ngOnInit(): void {
+        
+    }
 
     addHero() {
 
-        let addedPerson = [
-            {
-                "firstname": "Added",
-                "lastname": "Person",
-                "email": "added@example.com",
-                "phone": "650 238 8375"
-            }
-        ]
-        this.heroService.add(addedPerson);
+      console.log('hero', this.hero);
+        // let addedPerson = [
+        //     {
+        //         "id": -1,
+        //         "firstname": "",
+        //         "lastname": "Person",
+        //         "email": "added@example.com",
+        //         "phone": "650 238 8375"
+        //     }
+        // ]
+
+        let myhero = [
+            this.hero
+        ];
+
+        this.heroService.add(myhero);
     }
 
     onSubmit() { 
         // this.submitted = true; 
+        console.log('submitted');
     }
 }
