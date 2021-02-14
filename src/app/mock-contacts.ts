@@ -28,5 +28,19 @@ export const CONTACTS: Contact[] = [
         "lastname": "Green",
         "email": "johngreen@longerexample.com",
         "phone": "650 238 8375"
+    },
+    {
+        "id": 5,
+        "firstname": "Frosty",
+        "lastname": "Snowman",
+        "email": "aalongerlastname@longerexample.com",
+        "phone": "650 238 8375"
+    },
+    {
+        "id": 6,
+        "firstname": "Evangeline",
+        "lastname": "Green",
+        "email": "johngreen@longerexample.com",
+        "phone": "650 238 8375"
     }
 ];

@@ -25,3 +25,82 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+Create an application in either React or Angular(not angularjs). The application will manipulate a contact list. Persistence to a back end is not required.
+
+The application will be evaluated on:
+
+1. Usage of state
+
+2. Routing in general
+
+3. Forms
+
+4. Overall architecture
+
+5. Styling
+
+
+
+Requirements for the application are as follows.
+
+1. You may use a set of existing contacts for the list. Hard code a list to start with. The list may reside in memory and be manipulated by the add, edit, and delete functions.
+
+2. Contact information should consist of:
+
+    a. First name
+
+    b. Last name
+
+    c. Phone number
+
+    d. Email address
+
+3. Initially the user should be viewing a page with a list of existing contacts. In the contacts list, a contact should be shown with a card style layout. Each card should consist of:
+
+    a. First name
+
+    b. Last name
+
+    c. Phone number
+
+4. From the Contact Listing page, the user should be able to:
+
+    a. Edit an existing contact
+
+        i. All fields are editable
+
+        ii. Create a separate page for editing
+
+    b. View a contact
+
+        i. Expand a contact to view all information
+
+    c. Delete an existing user
+
+        i. A simple delete with a confirmation popup. Are you sure you want to delete “Contact”?
+
+    d. Create a new contact
+
+        i. Create a separate page for creating
+    After any contact actions have been performed, the list must update to reflect any changes
+
+
+TODO
+
+card link 
+phone formats - type in international and national numbers with formatting
+first - make card show hide work
+second - make card show hide efficient
+
+form - can reuse template for new and edit?
+add color
+aria expanded true false, expand a second click closes it
+
+clean up sending new person to the service, why need an array not {}?
+
+text change contact to contact
+
+format pages
+
+change object values from one to other

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HeroService } from '../hero.service';
+import { ContactService } from '../contact.service';
 import { MessageService } from '../message.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
@@ -11,18 +11,18 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class NewcontactComponent implements OnInit {
 
-    hero = { id: -1, firstname: '', lastname: '', email: '', phone: '' };
+    contact = { id: -1, firstname: '', lastname: '', email: '', phone: '' };
 
-    addHero() {
+    addContact() {
 
-        let myhero = [
-            this.hero
+        let mycontact = [
+            this.contact
         ];
 
-        this.heroService.add(myhero);
+        this.contactService.add(mycontact);
     }
 
-    constructor(private heroService: HeroService, private messageService: MessageService, private route: ActivatedRoute) { }
+    constructor(private contactService: ContactService, private messageService: MessageService, private route: ActivatedRoute) { }
 
     ngOnInit() { }
 
