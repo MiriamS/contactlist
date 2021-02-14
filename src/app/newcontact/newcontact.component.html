@@ -1,10 +1,12 @@
 <div class="container">
 
+    <!-- <ContactformComponent [contact]="contact"></ContactformComponent> -->
+
     <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
         <h1>Add a New Contact</h1>
 
         <div class="form-group">
-            <label for="firstname">First Name</label>
+            <label for="firstname">First Name<sup aria-labelledby="required">*</sup></label>
             <input id="firstname" name="firstname" [(ngModel)]="contact.firstname" #firstname="ngModel" type="text"
                 required>
 
@@ -14,7 +16,7 @@
         </div>
 
         <div class="form-group">
-            <label for="lastname">Last Name</label>
+            <label for="lastname">Last Name<sup aria-labelledby="required">*</sup></label>
             <input id="lastname" type="text" class="form-control" name="lastname" #lastname="ngModel"
                 [(ngModel)]="contact.lastname" required>
 
@@ -24,7 +26,7 @@
         </div>
 
         <div class="form-group">
-            <label for="email">Email</label>
+            <label for="email">Email<sup aria-labelledby="required">*</sup></label>
             <input id="email" name="email" [(ngModel)]="contact.email" #email="ngModel" type="text" required>
 
             <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert" role="alert">
@@ -33,7 +35,7 @@
         </div>
 
         <div class="form-group">
-            <label for="phone">Phone</label>
+            <label for="phone">Phone<sup aria-labelledby="required">*</sup></label>
             <input id="phone" type="text" class="form-control" name="phone" #phone="ngModel" [(ngModel)]="contact.phone"
                 required>
 
