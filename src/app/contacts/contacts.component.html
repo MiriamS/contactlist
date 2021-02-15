@@ -4,16 +4,18 @@
 </div>
 <ul class="contacts">
     <li *ngFor="let contact of contacts">
-        <div class="card" [aria-expanded]="contact === selectedContact" [class.expanded]="contact === selectedContact">
+        <div class="card" [class.expanded]="contact === selectedContact">
             <h3>{{contact.firstname}} {{contact.lastname}}</h3>
             <span class="phone">{{contact.phone}}</span>
 
-            <div aria-labelledby="{{contact.id}}" class="expand-box">
+            <div aria-labelledby="{{contact.id}}" [attr.aria-hidden]="contact !== selectedContact" class="expand-box" [attr.id]="'expandBox' + contact.id">
                 <a [href]="'mailto:' + contact.email">{{contact.email}}</a>
             </div>
-            <div class="actions" [data-target]="contact.id">
+            <div class="actions">
 
-                <button type="button" aria-controls="show-email-id" class="expand-button" [data-target]="contact.id"
+                <button type="button" class="expand-button" 
+                    [attr.aria-controls]="'expandBox' + contact.id" 
+                    [attr.aria-expanded]="contact === selectedContact"  
                     (click)="onSelect(contact)">
                     <span>Expand</span>
                     <span>Contract</span>
