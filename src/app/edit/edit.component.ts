@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ContactService } from '../contact.service';
-import { MessageService } from '../message.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 
@@ -16,7 +15,7 @@ export class EditComponent implements OnInit {
     addOrUpdate: string;
     person: object;
 
-    constructor(private contactService: ContactService, private messageService: MessageService, private route: ActivatedRoute) { }
+    constructor(private contactService: ContactService, private route: ActivatedRoute) { }
 
     ngOnInit() {
 
@@ -30,7 +29,6 @@ export class EditComponent implements OnInit {
         this.contact.phone = person[0].phone;
         this.contact.email = person[0].email;
 
-        this.data = "Hii from parent";
         this.addOrUpdate = "edit";
         this.person = this.contact;
     }

@@ -1,8 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ContactService } from '../contact.service';
-import { MessageService } from '../message.service';
-import { ActivatedRoute } from '@angular/router';
-import { NewcontactComponent } from '../newcontact/newcontact.component';
 
 @Component({
     selector: 'app-contactform',
@@ -25,7 +22,7 @@ import { NewcontactComponent } from '../newcontact/newcontact.component';
         }
     }
 
-    constructor(private contactService: ContactService, private messageService: MessageService) { }
+    constructor(private contactService: ContactService) { }
 
     ngOnInit() {}
 

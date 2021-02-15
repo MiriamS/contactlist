@@ -1,21 +1,17 @@
 import { Injectable } from '@angular/core';
-
 import { Observable, of } from 'rxjs';
-
 import { Contact } from './contact';
 import { CONTACTS } from './mock-contacts';
-import { MessageService } from './message.service';
 
 @Injectable({
     providedIn: 'root',
 })
 export class ContactService {
 
-    constructor(private messageService: MessageService) { }
+    constructor() { }
 
     getContacts(): Observable<Contact[]> {
         let contacts = of(CONTACTS);
-        this.messageService.add('ContactService: fetched contacts');
         return contacts;
     }
 
@@ -27,7 +23,6 @@ export class ContactService {
             }
         })
         return contact;
-        this.messageService.add('ContactService: getting one ' + identifier);
     }
 
     add(personToAdd: object) {
@@ -48,7 +43,6 @@ export class ContactService {
 
         CONTACTS.push(personToAdd[0]);
 
-        this.messageService.add('ContactService: add contacts');
     }
 
     update(personToAdd: object) {
@@ -62,7 +56,6 @@ export class ContactService {
             }
         });
 
-        this.messageService.add('ContactService: update contact id');
     }
 
     delete(identifier: number) {
@@ -71,6 +64,5 @@ export class ContactService {
                 CONTACTS.splice(index, 1);
             }
         })
-        this.messageService.add('ContactService: delete contact id' + identifier);
-    }
+     }
 }

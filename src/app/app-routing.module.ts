@@ -4,7 +4,6 @@ import { NewcontactComponent } from './newcontact/newcontact.component';
 import { EditComponent } from './edit/edit.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { ContactDetailComponent } from './contact-detail/contact-detail.component';
-import { MessagesComponent } from './messages/messages.component';
 
 const routes: Routes = [
     { path: 'newcontact', component: NewcontactComponent },
