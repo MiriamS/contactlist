@@ -1,9 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ContactService } from '../contact.service';
 import { MessageService } from '../message.service';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
-import { ContactformComponent } from '../contactform/contactform.component';
 
 @Component({
     selector: 'app-newcontact',
@@ -13,6 +11,8 @@ import { ContactformComponent } from '../contactform/contactform.component';
 export class NewcontactComponent implements OnInit {
 
     contact = { id: -1, firstname: '', lastname: '', email: '', phone: '' };
+    addOrUpdate: string;
+    person: object;
 
     addContact() {
         let mycontact = [
@@ -23,7 +23,10 @@ export class NewcontactComponent implements OnInit {
 
     constructor(private contactService: ContactService, private messageService: MessageService, private route: ActivatedRoute) { }
 
-    ngOnInit() { }
+    ngOnInit() {
+        this.addOrUpdate = "add";
+        this.person = this.contact;
+    }
 
     onSubmit() {
         // this.submitted = true; 

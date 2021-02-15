@@ -12,6 +12,9 @@ import { ActivatedRoute } from '@angular/router';
 export class EditComponent implements OnInit {
 
     contact = { id: -1, firstname: '', lastname: '', email: '', phone: '' };
+    data: string;
+    addOrUpdate: string;
+    person: object;
 
     constructor(private contactService: ContactService, private messageService: MessageService, private route: ActivatedRoute) { }
 
@@ -26,6 +29,10 @@ export class EditComponent implements OnInit {
         this.contact.lastname = person[0].lastname;
         this.contact.phone = person[0].phone;
         this.contact.email = person[0].email;
+
+        this.data = "Hii from parent";
+        this.addOrUpdate = "edit";
+        this.person = this.contact;
     }
 
     addContact() {
@@ -37,6 +44,6 @@ export class EditComponent implements OnInit {
 
     onSubmit() {
         // this.submitted = true; 
-        console.log('submitted');
+        console.log('submitted update');
     }
 }

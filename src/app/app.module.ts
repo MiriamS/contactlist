@@ -8,6 +8,7 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { ContactDetailComponent } from './contact-detail/contact-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { EditComponent } from './edit/edit.component';
+import { ContactformComponent } from './contactform/contactform.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { EditComponent } from './edit/edit.component';
         ContactDetailComponent,
         MessagesComponent,
         EditComponent,
+        ContactformComponent,
     ],
     imports: [
         BrowserModule,

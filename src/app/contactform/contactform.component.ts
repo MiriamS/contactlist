@@ -12,15 +12,22 @@ import { NewcontactComponent } from '../newcontact/newcontact.component';
   })
   export class ContactformComponent implements OnInit {
 
-    contact = { id: -1, firstname: '', lastname: '', email: '', phone: '' };
+    //contact = { id: -1, firstname: '', lastname: '', email: '', phone: '' };
     @Input() parentData;
     @Input("data") modifiedName;
+    @Input() addOrUpdate;
+    @Input("person") contact;
 
-    addContact() {
+    updateContacts() {
         let mycontact = [
             this.contact
         ];
-        this.contactService.add(mycontact);
+        if (this.addOrUpdate === 'add') {
+            this.contactService.add(mycontact);
+        } else {
+            this.contactService.update(mycontact);
+        }
+        
     }
 
     constructor(private contactService: ContactService, private messageService: MessageService, private route: ActivatedRoute) { }
@@ -28,6 +35,8 @@ import { NewcontactComponent } from '../newcontact/newcontact.component';
     ngOnInit() { 
         console.log("This is the parent data", this.parentData);
         console.log("This is the parent data", this.modifiedName);
+        console.log("This is addOrUpdate", this.addOrUpdate);
+        console.log("This is contact", this.contact);
     }
 
     onSubmit() {

@@ -1,4 +1,4 @@
-<h2>child form {{parentData}} {{modifiedName}}</h2>
+<h2>child form {{parentData}} {{modifiedName}}  {{addOrUpdate}}</h2>
 
    <form #contactform="ngForm">
         <h1>Add a New Contact</h1>
@@ -42,7 +42,7 @@
             </div>
         </div>
         <div class="form-group actions">
-            <button type="submit" (click)="addContact()" [disabled]="contactform.invalid">Save</button>
+            <button type="submit" (click)="updateContacts()" [disabled]="contactform.invalid">Save</button>
             <a routerLink="/contact" class="button-link">Contacts</a>
         </div>
     </form> 
