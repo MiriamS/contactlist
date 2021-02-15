@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ContactService } from '../contact.service';
 import { MessageService } from '../message.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
+import { ContactformComponent } from '../contactform/contactform.component';
 
 @Component({
     selector: 'app-newcontact',

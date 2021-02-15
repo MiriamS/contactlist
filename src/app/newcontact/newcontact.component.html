@@ -5,7 +5,7 @@
     <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
         <h1>Add a New Contact</h1>
 
-        <div class="form-group">
+        <div class="form-group fname">
             <label for="firstname">First Name<sup aria-labelledby="required">*</sup></label>
             <input id="firstname" name="firstname" [(ngModel)]="contact.firstname" #firstname="ngModel" type="text"
                 required>
@@ -15,7 +15,7 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group lname">
             <label for="lastname">Last Name<sup aria-labelledby="required">*</sup></label>
             <input id="lastname" type="text" class="form-control" name="lastname" #lastname="ngModel"
                 [(ngModel)]="contact.lastname" required>
@@ -25,7 +25,7 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group e-mail">
             <label for="email">Email<sup aria-labelledby="required">*</sup></label>
             <input id="email" name="email" [(ngModel)]="contact.email" #email="ngModel" type="text" [email]="true" required>
 
@@ -34,7 +34,7 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group tel">
             <label for="phone">Phone<sup aria-labelledby="required">*</sup></label>
             <input id="phone" type="text" class="form-control" name="phone" #phone="ngModel" [(ngModel)]="contact.phone"  
                 required>
@@ -43,7 +43,7 @@
                 Valid phone number is required.
             </div>
         </div>
-        <div class="form-group">
+        <div class="form-group actions">
             <button type="submit" (click)="addContact()" [disabled]="contactForm.invalid">Save</button>
             <a routerLink="/contact" class="button-link">Contacts</a>
         </div>

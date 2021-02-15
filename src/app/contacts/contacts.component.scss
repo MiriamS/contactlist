@@ -53,7 +53,7 @@ ul {
     color: #000;
     background-color: #fff;
     margin: 20px 30px 46px;
-    transition: margin 1s;
+    transition: margin .5s ease-in;
 }
 
 .expanded.card {
@@ -94,11 +94,10 @@ h3 {
 }
 
 .expand-box {
-    /* // outline: 1px solid brown; */
     padding: 0 16px;
     height: 0;
     overflow: hidden;
-    transition: height 1s;
+    transition: height .5s ease-in;
 }
 
 .expanded .expand-box {
@@ -117,10 +116,5 @@ h3 {
 .expand-box a {
     font-size: 14px;
     line-height: 20px;
-    display: none;
     color: rgba(0,0,0,.65);
-}
-
-.expanded .expand-box a {
-    display: inline;
 }
