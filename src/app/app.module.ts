@@ -5,7 +5,6 @@ import { FormGroup, FormsModule, FormControl, Validators } from '@angular/forms'
 import { AppComponent } from './app.component';
 import { NewcontactComponent } from './newcontact/newcontact.component';
 import { ContactsComponent } from './contacts/contacts.component';
-import { ContactDetailComponent } from './contact-detail/contact-detail.component';
 import { EditComponent } from './edit/edit.component';
 import { ContactformComponent } from './contactform/contactform.component';
 
@@ -15,7 +14,6 @@ import { ContactformComponent } from './contactform/contactform.component';
         AppComponent,
         NewcontactComponent,
         ContactsComponent,
-        ContactDetailComponent,
         EditComponent,
         ContactformComponent,
     ],
