@@ -34,16 +34,4 @@ export class EditComponent implements OnInit {
         this.addOrUpdate = "edit";
         this.person = this.contact;
     }
-
-    addContact() {
-        let mycontact = [
-            this.contact
-        ];
-        this.contactService.update(mycontact);
-    }
-
-    onSubmit() {
-        // this.submitted = true; 
-        console.log('submitted update');
-    }
 }

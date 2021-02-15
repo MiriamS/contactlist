@@ -1,7 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ContactService } from '../contact.service';
 import { MessageService } from '../message.service';
-import { ActivatedRoute } from '@angular/router';
 
 @Component({
     selector: 'app-newcontact',
@@ -21,15 +20,10 @@ export class NewcontactComponent implements OnInit {
         this.contactService.add(mycontact);
     }
 
-    constructor(private contactService: ContactService, private messageService: MessageService, private route: ActivatedRoute) { }
+    constructor(private contactService: ContactService, private messageService: MessageService) { }
 
     ngOnInit() {
         this.addOrUpdate = "add";
         this.person = this.contact;
-    }
-
-    onSubmit() {
-        // this.submitted = true; 
-        console.log('submitted');
     }
 }

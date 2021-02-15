@@ -1,7 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ContactService } from '../contact.service';
 import { MessageService } from '../message.service';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { NewcontactComponent } from '../newcontact/newcontact.component';
 
@@ -12,9 +11,6 @@ import { NewcontactComponent } from '../newcontact/newcontact.component';
   })
   export class ContactformComponent implements OnInit {
 
-    //contact = { id: -1, firstname: '', lastname: '', email: '', phone: '' };
-    @Input() parentData;
-    @Input("data") modifiedName;
     @Input() addOrUpdate;
     @Input("person") contact;
 
@@ -27,17 +23,11 @@ import { NewcontactComponent } from '../newcontact/newcontact.component';
         } else {
             this.contactService.update(mycontact);
         }
-        
     }
 
-    constructor(private contactService: ContactService, private messageService: MessageService, private route: ActivatedRoute) { }
+    constructor(private contactService: ContactService, private messageService: MessageService) { }
 
-    ngOnInit() { 
-        console.log("This is the parent data", this.parentData);
-        console.log("This is the parent data", this.modifiedName);
-        console.log("This is addOrUpdate", this.addOrUpdate);
-        console.log("This is contact", this.contact);
-    }
+    ngOnInit() {}
 
     onSubmit() {
         // this.submitted = true; 
