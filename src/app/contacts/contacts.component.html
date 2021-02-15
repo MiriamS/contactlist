@@ -1,8 +1,9 @@
 <h1>Contacts</h1>
-<div>
-    <a routerLink="/newcontact" class="button-link add-contact">Add a contact</a>
-</div>
+
 <ul class="contacts">
+    <li>
+        <a routerLink="/newcontact" class="button-link add-contact">Add a contact</a>
+    </li>
     <li *ngFor="let contact of contacts">
         <div class="card" [class.expanded]="contact === selectedContact">
             <h3>{{contact.firstname}} {{contact.lastname}}</h3>
@@ -25,8 +26,4 @@
             </div>
         </div>
     </li>
-    <li class="spacer"></li><!-- keeps last row lined up with the row above it -->
-    <li class="spacer"></li>
-    <li class="spacer"></li>
-    <li class="spacer"></li>
 </ul>

@@ -26,8 +26,4 @@ import { ContactService } from '../contact.service';
 
     ngOnInit() {}
 
-    onSubmit() {
-        // this.submitted = true; 
-        console.log('submitted');
-    }
 }

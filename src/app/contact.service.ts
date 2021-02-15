@@ -26,28 +26,22 @@ export class ContactService {
     }
 
     add(personToAdd: object) {
-
         // fake autoincrement id
         if (personToAdd[0].id === -1) {
             let highestId = -1;
-
-            CONTACTS.forEach(function (item, index) {
+            CONTACTS.forEach(function (item) {
                 if (item.id > highestId) {
                     highestId = item.id;
                 }
             });
-
             highestId++;
             personToAdd[0].id = highestId;
         }
-
         CONTACTS.push(personToAdd[0]);
-
     }
 
     update(personToAdd: object) {
-
-        CONTACTS.forEach(function (item, index) {
+        CONTACTS.forEach(function (item) {
             if (item.id === personToAdd[0].id) {
                 item.firstname = personToAdd[0].firstname;
                 item.lastname = personToAdd[0].lastname;
@@ -55,7 +49,6 @@ export class ContactService {
                 item.email = personToAdd[0].email;
             }
         });
-
     }
 
     delete(identifier: number) {
