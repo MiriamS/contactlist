@@ -3,44 +3,44 @@ import { Contact } from './contact';
 export const CONTACTS: Contact[] = [
     {
         "id": 1,
-        "firstname": "Miriam",
-        "lastname": "Salzer",
-        "email": "miriam@msalzer.com",
-        "phone": "650 238 8375"
+        "firstname": "Neta",
+        "lastname": "Barzilai",
+        "email": "neta@neta.com",
+        "phone": "+972 53-1260099"
     },
     {
         "id": 2,
-        "firstname": "Jay",
+        "firstname": "J",
         "lastname": "Lo",
-        "email": "jl@example.com",
-        "phone": "650 238 8375"
+        "email": "jl@jl.com",
+        "phone": "(650) 098-0987"
     },
     {
         "id": 3,
-        "firstname": "Alongerfirstname",
-        "lastname": "Alongerlastname",
-        "email": "aalongerlastname@longerexample.com",
+        "firstname": "Hanitra",
+        "lastname": "Razaonialimiarina",
+        "email": "hrazaonialimiarina@Razaonialimiarina.com",
         "phone": "650 238 8375"
     },
     {
         "id": 4,
-        "firstname": "John",
-        "lastname": "Green",
-        "email": "johngreen@longerexample.com",
-        "phone": "650 238 8375"
+        "firstname": "Rosalía",
+        "lastname": "Vila Tobella",
+        "email": "rosalia@rosalia.com",
+        "phone": "88 888 77 66"
     },
     {
         "id": 5,
-        "firstname": "Frosty",
-        "lastname": "Snowman",
-        "email": "aalongerlastname@longerexample.com",
-        "phone": "650 238 8375"
+        "firstname": "Nirali",
+        "lastname": "Kartik",
+        "email": "niralik@maatibaani.com",
+        "phone": "+91-12345 12345"
     },
     {
         "id": 6,
-        "firstname": "Evangeline",
-        "lastname": "Green",
-        "email": "johngreen@longerexample.com",
-        "phone": "650 238 8375"
+        "firstname": "Jocelyne",
+        "lastname": "Béroard",
+        "email": "jocelyne@kassav.com",
+        "phone": "(650) 987-6543"
     }
 ];
