@@ -84,23 +84,3 @@ Requirements for the application are as follows.
 
         i. Create a separate page for creating
     After any contact actions have been performed, the list must update to reflect any changes
-
-
-TODO
-
-card link 
-phone formats - type in international and national numbers with formatting
-first - make card show hide work
-second - make card show hide efficient
-
-form - can reuse template for new and edit?
-add color
-aria expanded true false, expand a second click closes it
-
-clean up sending new person to the service, why need an array not {}?
-
-text change contact to contact
-
-format pages
-
-change object values from one to other

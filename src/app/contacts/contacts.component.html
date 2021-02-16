@@ -10,7 +10,7 @@
             <span class="phone">{{contact.phone}}</span>
 
             <div aria-labelledby="{{contact.id}}" [attr.aria-hidden]="contact !== selectedContact" class="expand-box" [attr.id]="'expandBox' + contact.id">
-                <a [href]="'mailto:' + contact.email">{{contact.email}}</a>
+                <a [href]="'mailto:' + contact.email" [class.expanded-delay]="contact === selectedContactDelay">{{contact.email}}</a>
             </div>
             <div class="actions">
 

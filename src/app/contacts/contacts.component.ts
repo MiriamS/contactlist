@@ -10,6 +10,7 @@ import { ContactService } from '../contact.service';
 export class ContactsComponent implements OnInit {
 
     selectedContact: Contact;
+    selectedContactDelay: Contact;
     contacts: Contact[];
 
     constructor(private contactService: ContactService) { }
@@ -21,8 +22,10 @@ export class ContactsComponent implements OnInit {
     onSelect(contact: Contact): void {
         if (this.selectedContact === contact) {
             this.selectedContact = null;
+            setTimeout(() => this.selectedContactDelay = null, 1000);
         } else {
             this.selectedContact = contact;
+            setTimeout(() => this.selectedContactDelay = contact, 1000); 
         }
     }
 

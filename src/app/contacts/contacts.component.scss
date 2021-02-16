@@ -115,8 +115,20 @@ h3 {
 
 .expand-box a {
     font-size: 14px;
-    line-height: 20px;
+    line-height: 24px;
     color: rgba(0,0,0,.65);
+    display: none;
+}
+
+.expanded .expand-box a,
+.expand-box .expanded-delay {
+    display: inline;
+}
+
+.expand-box a:focus {
+    color: #f10085;
+    outline: 1px solid #f10085;
+    outline-offset: 2px;
 }
 
 @media screen and (max-width: 855px) {
